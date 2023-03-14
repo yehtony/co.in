@@ -1,0 +1,101 @@
+/*-----------------------------專題學習系統平台：版型-----------------------------*/
+@charset "utf-8";
+
+html, body{
+	font-family: 微軟正黑體;
+	text-align: center;
+	overflow: hidden;						/*-----------文長不要拉霸------------*/
+}
+#wrapper{
+	width: 90%;
+	margin: 20px auto;
+/*	background-color: red;*/
+}
+/*-----------------------------專題學習系統平台：註冊-----------------------------*/
+legend{
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+}
+em{
+	margin: 5px;
+	color: red;
+}
+#choice_identity{
+	width: 40%;
+	padding: 20px 30px 20px 30px;
+	margin: 120px auto;
+	background-color: yellow;
+
+	background: #fefcea; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #fefcea 0%, #f1da36 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#fefcea), color-stop(100%,#f1da36)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #fefcea 0%,#f1da36 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #fefcea 0%,#f1da36 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #fefcea 0%,#f1da36 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #fefcea 0%,#f1da36 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+#register_identity{
+	padding: 6px 45px 6px 45px;
+	margin-bottom: 15px;
+	font-size: 15px;
+	color: #FFFFFF;
+	background-color: #BB5500;
+	border: 1px solid #BB5500;
+	border-radius: 12px;
+	cursor: pointer;
+}
+#register_field{
+	width: 50%;
+	padding: 20px 30px 20px 30px;
+	margin: 20px auto;
+	border-radius: 15px;
+	background-color: #F1FAFA;
+
+	background: #fefcea; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #fefcea 0%, #f1da36 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#fefcea), color-stop(100%,#f1da36)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg,  #fefcea 0%,#f1da36 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg,  #fefcea 0%,#f1da36 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg,  #fefcea 0%,#f1da36 100%); /* IE10+ */
+	background: linear-gradient(135deg,  #fefcea 0%,#f1da36 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+#register_form{
+	text-align: left;
+}
+#register_cancel{
+	width: 15%;
+	margin-left: 280px;
+	color: #FFFFFF;
+	background-color: #BB5500;
+	border: 1px solid #BB5500;
+	border-radius: 12px;
+	cursor: pointer;
+	display: none;
+}
+#register_submit{
+	width: 15%;
+	margin-left: 20px;
+	color: #FFFFFF;
+	background-color: #BB5500;
+	border: 1px solid #BB5500;
+	border-radius: 12px;
+	cursor: pointer;
+	display: none;
+}
+#register_preview{
+	width: 15%;
+	margin-left: 380px;
+	color: #FFFFFF;
+	background-color: #BB5500;
+	border: 1px solid #BB5500;
+	border-radius: 12px;
+	cursor: pointer;
+}
+#notice{
+	margin: 5px;
+	font-size: 10px;
+	color: red;
+}

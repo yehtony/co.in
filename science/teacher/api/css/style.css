@@ -1,0 +1,833 @@
+/*-----------------------------科學專題系統(教師)：版型-----------------------------*/
+@charset "utf-8";
+
+html, body{
+	height: 100%;							/*-----------全視窗height100%-----------*/
+	margin: 0px;
+	font-family: 微軟正黑體;
+	overflow: hidden;
+	background-color: #F1FAFA;
+}
+label{
+	font-weight: bolder;
+	vertical-align: top; 	 				/*---------------向上對齊---------------*/
+}
+#wrapper{
+	height: 100%;
+/*	background-color: red;*/
+}
+#header{
+	height: 50px;
+	padding: 16px 5px 14px 10px;
+	background-color: #69B0FA;
+}
+/*#header img{
+	float: left;
+	width: 58px;
+	margin: 0px 10px 0px 5px;
+}*/
+#header #logo img{
+	float: left;
+	width: 58px;
+	margin: 0px 10px 0px 5px;
+}
+#header #sub_logo img{
+	float: left;
+	width: 83%;
+}
+#header button{
+	float: right;
+	margin-right: 20px;
+}
+/*#topic{*/									/*------------------標題------------------*/
+/*	margin: 0px;
+	font-size: 180%;
+	letter-spacing: 5px;
+}*/
+/*#sub_topic{*/								/*-----------------副標題-----------------*/
+	/*margin: 0px;
+	font-size: 120%;
+}*/
+#title{										/*-----------------子標題-----------------*/
+	margin: 0px;
+	text-align: center;
+}
+#nav{
+	padding: 8px 0px 0px 40px;
+/*	background-color: green;*/
+}
+#nav button{
+	width: 10%;
+	margin: 8px 15px -9px 0px;
+	font-size: 15px;
+	font-weight: bolder;
+	line-height: 34px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #69B0FA;
+	border: 0px;
+	border-radius: 8px;
+	display: inline-block;
+}
+#nav button:hover{
+	background-color: #4197EE;
+}
+#nav p{
+	font-size: 14px;
+}
+#content{
+	height: 75%;							/*------------overflow-y使用-----------*/
+	margin-top: -10px;
+	padding: 0px 40px;
+	overflow-y: auto;
+/*	background-color: blue;*/
+}
+#centercolumn{
+	min-height: 90%;
+}
+#footer{
+	padding: 6px 0px 1px 0px;
+	font-size: 20%;
+	line-height: 5px;
+	text-align: center;
+	clear: both;
+/*	background-color: pink;*/
+}
+#footer img{
+	vertical-align: middle;
+}
+/*-----------------------------科學專題系統(教師)：控制-----------------------------*/
+#index_btn{
+	width: 35%;
+	height: 42px;
+	cursor: pointer;
+}
+#news_btn{
+	width: 110px;
+	height: 40px;
+	margin: 5px 10px;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px solid #000000;
+	border-radius: 3px;
+	display: inline-block;
+	cursor: pointer;
+}
+#news_table{
+	position: absolute;
+	top: 70px;
+	right: 160px;
+	width: 47%;
+	height: 150px;
+	padding: 10px;
+	font-size: 15px;
+	background-color: #F1FAFA;
+	border: solid 1px #333;
+	display: none;
+	overflow: auto;
+	z-index: 999;
+}
+#news_table a{
+	color: #000000;
+	text-decoration: none;
+}
+#news_bubble{
+	padding: 0.5px 3px 0.5px 3px;
+	margin-left: 5px;
+	font-size: 5px;
+	color: #FFFFFF;
+	background-color: red;
+	border-radius: 50px;
+}
+#news_more{
+	padding-top: 10px;
+	font-size: 14px;
+	color: blue;
+	cursor: pointer;
+}
+#func_btn{
+	width: 110px;
+	height: 40px;
+	margin: 5px 8px;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0);
+	border: 2px solid #000000;
+	border-radius: 3px;
+	display: inline-block;
+	cursor: pointer;
+}
+#func_table{
+	position: absolute;
+	top: 70px;
+	right: 24px;
+	width: 110px;
+	height: 150px;
+	font-size: 15px;
+	background-color: #F1FAFA;
+	border: solid 1px #333;
+	display: none;
+	z-index: 999;
+}
+#func_table li{
+	margin-left: -40px;
+	margin-top: 0px;
+	line-height: 30px;
+	list-style-type: none;
+	text-align: center;
+	cursor: pointer;
+}
+#func_table li:hover{
+	color: #FFFFFF;
+	background-color: #4197ee;
+}
+/*-----------------------------科學專題系統(教師)：首頁-----------------------------*/
+#info_field{
+	min-height: 180px;
+	margin: 5px 10px 5px 10px;
+}
+#leftcolumn{
+	float: left;
+	width: 50%;
+/*	background-color: red;*/
+}
+#rightcolumn{
+	float: left;
+	width: 50%;
+/*	background-color: green;*/
+}
+/*-----------------------------科學專題系統(教師)：指引-----------------------------*/
+.guide_scroll{
+	position: fixed;
+	top: 75px;
+	left: -900px;
+	width: 900px;
+	z-index: 10;
+}
+.guide_tab{
+	position: absolute;
+	top: 105px;
+	right: -30px;
+	width: 30px;
+	font-weight: bolder;
+	line-height: 24px;
+	background-color: #69B0FA;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 9px 0;
+	cursor: pointer;
+
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+}
+.guide_content{
+	height: 550px;
+	background-color: #F1FAFA;
+	border: 5px solid #69B0FA;
+}
+/*--------------------------------教師指導手冊：指引--------------------------------*/
+.guide_menu, .guide_menu ul, .guide_menu ul li, .guide_menu ul li a{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	line-height: 10px;
+	list-style-type: none;
+	display: block;
+}
+.guide_menu{
+	float: left;
+	width: 185px;
+	margin: 20px;
+}
+.guide_menu ul ul{								/*--------------全部展開-------------*/
+	display: none;
+}
+.guide_menu > ul > li.active > ul{				/*-----------.active為展開-----------*/
+	display: block;
+}
+.guide_menu > ul > li > a{
+	padding: 16px 22px;
+	font-size: 14px;
+	color: #000000;
+	text-decoration: none;
+	background: #69B0FA;
+	cursor: pointer;
+	z-index: 2;
+}
+.guide_menu > ul > li > a:hover{
+	color: #CBFEFF;
+}
+.guide_menu ul ul li a{
+	padding: 14px 22px;
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	background: #CBFEFF;
+	cursor: pointer;
+	z-index: 2;
+}
+.guide_menu ul ul li a:hover{
+	color: #FFFFFF;
+}
+.guide_book{
+	width: 640px;
+	height: 93%;
+	padding: 0px 5px;
+	margin: 20px;
+	border: 2px solid #69B0FA;
+	overflow-x: none;
+	overflow-y: auto;
+}
+.guide_hint{
+	color: blue;
+	cursor: pointer;
+}
+.guide_hint_area{
+	position: relative;
+	top: -150px;
+	left: 20px;
+	width: 175px;
+	height: 117px;
+	padding: 5px;
+	font-size: 14px;
+	border: 2px solid #69B0FA;
+	overflow-y: scroll;
+}
+.guide_hint_area h5{
+	margin: 0 auto;
+	font-size: 16px;
+}
+/*-----------------------------網路科展系統(教師)：工具-----------------------------*/
+.tool_scroll{
+	position: fixed;
+	top: 420px;
+	right: -120px;
+	width: 120px;
+	z-index: 99;
+}
+.tool_tab{
+	position: absolute;
+	top: 30px;
+	left: -30px;
+	width: 30px;
+	font-weight: bolder;
+	line-height: 24px;
+	background: #69B0FA;
+	color: #ffffff;
+	text-align: center;
+	padding: 9px 0;
+	cursor: pointer;
+
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+}
+.tool_content{
+	height: 150px;
+	text-align: center;
+	background: white;
+	border: 5px solid #69B0FA;
+}
+.tool_content button{
+	width: 92%;
+	height: 28%;
+	margin-top: 5px;
+}
+/*-------------------------------------發送廣播-------------------------------------*/
+.help_btn{
+	float: right;
+	margin-top: -5px;
+	margin-bottom: 10px;
+}
+#help_new_area textarea{
+	width: 80%;
+	height: 100px;
+	vertical-align: top;
+	resize: none;
+}
+#help_read_area textarea{
+	width: 85%;
+	height: 60px;
+	vertical-align: top;
+	resize: none;
+}
+/*-----------------------------------審核任務詳情-----------------------------------*/
+.examine_detail{
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.examine_pilot{
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.examine_detail_submit{
+	float: right;
+}
+#examine_pass_area textarea{
+	width: 80%;
+	height: 80px;
+	vertical-align: top;
+	resize: none;
+}
+#examine_idea_area{
+	width: 70%;
+}
+#examine_more{
+	float: right;
+	color: blue;
+	cursor: pointer;
+}
+/*--------------------------------觀看研究題目：1-1---------------------------------*/
+#examine_detail_area1-1{
+	width: 45%;
+}
+/*--------------------------------觀看研究問題：2-1---------------------------------*/
+#examine_detail_area2-1{
+	width: 60%;
+}
+#examine_detail_area2-1 table{
+	width: 98%;
+	margin: 20px auto;
+	border-collapse: collapse;			
+}
+#examine_detail_area2-1 table th{
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #000000;
+	background-color: #69B0FA;
+}
+#examine_detail_area2-1 table td{
+	padding: 15px 0px 15px 5px;
+	border: 1px solid #000000;
+	background-color: #D2DEEF;
+}
+/*-------------------------------觀看研究構想表：2-2--------------------------------*/
+#examine_detail_area2-2{
+	width: 70%;
+}
+.research_idea_table{
+	width: 98%;
+	padding: 5px;
+	margin: 20px auto;
+	border-collapse: collapse;						/*-----------表格線-----------*/
+}
+.research_idea_table th{
+	padding: 5px;
+	text-align: center;
+	border: 1px solid #000000;
+	background-color: #69B0FA;
+}
+.research_idea_table td{
+	padding: 20px 0px 20px 5px;
+	border: 1px solid #000000;
+}
+.question_steps table{
+	width: 70%;
+	margin: 5px auto;
+	border: 1px solid #000000;
+	border-collapse: collapse;
+}
+.question_steps th{
+	width: 25%;
+	line-height: 70px;
+	text-align: center;
+	border-right: 1px dotted #000000;
+	background-color: #69B0FA;
+}
+.material_choosed{
+	padding: 3px 5px 3px 5px;
+	margin: 5px 5px 5px 5px;
+	height: 140px;
+	font-size: 14px;
+	text-align: center;
+	border: rgb(165,165,165) 1px solid;
+	border-radius: 3px;
+	display: inline-block;
+}
+.material_deleted{
+	float: right;
+	margin-left: 5px;
+	font-size: 12px;
+	color: blue;
+	cursor: pointer;
+}
+/*--------------------------------觀看研究紀錄：2-3---------------------------------*/
+#examine_detail_area2-3{
+	width: 70%;
+}
+#examine_detail_area2-3 table{
+	width: 98%;
+	margin: 20px auto;
+	border-collapse: collapse;			
+}
+#examine_detail_area2-3 table th{
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #000000;
+	background-color: #69B0FA;
+}
+#examine_detail_area2-3 table td{
+	padding: 15px 0px 15px 5px;
+	border: 1px solid #000000;
+	background-color: #D2DEEF;
+}
+#examine_detail_area2-3 table button{
+	padding: 5px 10px;
+}
+/*-------------------------------觀看研究紀錄：2-4-p--------------------------------*/
+#examine_detail_area2-4-p{
+	width: 50%;
+}
+#examine_detail_area2-4-p table{
+	width: 98%;
+	margin: 20px auto;
+	border-collapse: collapse;			
+}
+#examine_detail_area2-4-p table th{
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #000000;
+	background-color: #69B0FA;
+}
+#examine_detail_area2-4-p table td{
+	padding: 15px 0px 15px 5px;
+	border: 1px solid #000000;
+	background-color: #D2DEEF;
+}
+#examine_detail_area2-4-p table button{
+	padding: 5px 10px;
+}
+/*--------------------------------觀看研究紀錄：2-4---------------------------------*/
+#examine_detail_area2-4{
+	width: 70%;
+}
+#examine_detail_area2-4 table{
+	width: 98%;
+	margin: 20px auto;
+	border-collapse: collapse;			
+}
+#examine_detail_area2-4 table th{
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #000000;
+	background-color: #69B0FA;
+}
+#examine_detail_area2-4 table td{
+	padding: 15px 0px 15px 5px;
+	border: 1px solid #000000;
+	background-color: #D2DEEF;
+}
+#examine_detail_area2-4 table button{
+	padding: 5px 10px;
+}
+/*--------------------------------觀看研究紀錄：3-1---------------------------------*/
+#examine_detail_area3-1{
+	width: 70%;
+}
+#examine_detail_area3-1 table{
+	width: 98%;
+	margin: 20px auto;
+	border-collapse: collapse;			
+}
+#examine_detail_area3-1 table th{
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #000000;
+	background-color: #69B0FA;
+}
+#examine_detail_area3-1 table td{
+	padding: 15px 0px 15px 5px;
+	border: 1px solid #000000;
+	background-color: #D2DEEF;
+}
+#examine_detail_area3-1 table button{
+	padding: 5px 10px;
+}
+/*-------------------------------觀看研究紀錄：3-1-e--------------------------------*/
+#examine_experiment_area{
+	width: 55%;
+}
+#examine_experiment_area table{
+	width: 98%;
+	margin: 20px auto;
+	border-collapse: collapse;			
+}
+#examine_experiment_area table th{
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #000000;
+	background-color: #69B0FA;
+}
+#examine_experiment_area table td{
+	padding: 15px 0px 15px 5px;
+	border: 1px solid #000000;
+}
+/*--------------------------------觀看研究紀錄：3-2---------------------------------*/
+#examine_detail_area3-2{
+	width: 70%;
+}
+#examine_detail_area3-2 table{
+	width: 98%;
+	margin: 20px auto;
+	border-collapse: collapse;			
+}
+#examine_detail_area3-2 table th{
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #000000;
+	background-color: #69B0FA;
+}
+#examine_detail_area3-2 table td{
+	padding: 15px 0px 15px 5px;
+	border: 1px solid #000000;
+	background-color: #D2DEEF;
+}
+#examine_detail_area3-2 table button{
+	padding: 5px 10px;
+}
+/*--------------------------------觀看研究紀錄：3-3---------------------------------*/
+#examine_detail_area3-3{
+	width: 70%;
+}
+#examine_detail_area3-3 table{
+	width: 98%;
+	margin: 20px auto;
+	border-collapse: collapse;			
+}
+#examine_detail_area3-3 table th{
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #000000;
+	background-color: #69B0FA;
+}
+#examine_detail_area3-3 table td{
+	padding: 15px 0px 15px 5px;
+	border: 1px solid #000000;
+	background-color: #D2DEEF;
+}
+#examine_detail_area3-3 table button{
+	padding: 5px 10px;
+}
+/*--------------------------------觀看研究紀錄：4-1---------------------------------*/
+#examine_detail_area4-1{
+	width: 55%;
+}
+#examine_detail_area4-1 table{
+	width: 98%;
+	margin: 20px auto;
+	border-collapse: collapse;			
+}
+#examine_detail_area4-1 table th{
+	padding: 8px;
+	text-align: center;
+	border: 1px solid #000000;
+	background-color: #69B0FA;
+}
+#examine_detail_area4-1 table td{
+	padding: 15px 0px 15px 5px;
+	border: 1px solid #000000;
+	background-color: #D2DEEF;
+}
+#examine_detail_area4-1 table button{
+	padding: 5px 10px;
+}
+/*--------------------------------觀看研究紀錄：4-2---------------------------------*/
+#examine_detail_area4-2{
+	width: 45%;
+}
+#examine_detail_area4-2 table{
+	width: 100%;
+	text-align: center;
+}
+.research_conclusion_table{
+	margin: 15px 0px;
+	min-height: 120px;
+}
+.research_conclusion_table th{
+	background-color: #eee;
+}
+.research_conclusion_table td{
+	padding: 10px 30px;
+	text-align: left;
+	word-break: break-all;
+}
+/*--------------------------------下載作品報告：5-1---------------------------------*/
+#examine_detail_area5-1{
+	width: 35%;
+}
+#examine_detail_area5-1 table{
+	margin: 15px 0px;
+	min-height: 120px;
+	border-collapse: collapse;			
+}
+#examine_detail_area5-1 table th{
+	background-color: #eee;
+}
+#examine_detail_area5-1 table td{
+	padding: 10px 30px;
+	text-align: center;
+	word-break: break-all;
+}
+/*--------------------------------觀看作品海報：5-2---------------------------------*/
+#examine_detail_area5-2{
+	width: 65%;
+}
+/*--------------------------------觀看作品影片：5-3---------------------------------*/
+#examine_detail_area5-3{
+	width: 45%;
+}
+#examine_qna_area{
+	width: 50%;
+}
+#examine_qna_area button{
+	margin: 0px 5px 5px 0px;
+}
+#examine_qna_area textarea{
+	width: 99%;
+	min-height: 100px; 
+	resize: none;
+}
+/*-----------------------------------系統使用說明-----------------------------------*/
+#system_use_area{
+	width: 75%;
+}
+#system_use_area h1{
+	margin: 25px;
+}
+#leftsystem{
+	float: left;
+	width: 24%;
+	height: 530px;
+	overflow-y: scroll;
+/*	background-color: red;*/
+}
+#rightsystem{
+	float: left;
+	width: 60%;
+	margin-left: 10px;
+	text-align: center;
+/*	background-color: green;*/
+}
+.system_menu{
+	margin: -10px 0px 0px -20px;
+}
+.system_menu li{
+	width: 90%;
+	margin-top: 10px;
+	font-size: 20px;
+	line-height: 36px;
+	list-style: none;
+	color: #a5a5a5;
+	text-align: center;
+	border: 1px #a5a5a5 solid;
+	border-radius: 3px;
+	cursor: pointer;
+}
+.system_menu li:hover{
+	color: #464646;
+	text-shadow: 2px 2px 5px;
+}
+.system_menu li:active{
+	background-color: #eee;
+}
+/*----------------------------網路科展系統(教師)：共用區----------------------------*/
+.fancybox_box{
+	position : fixed;
+	width 	 : 100%;
+	height 	 : 100%;
+	top 	 : 0px;
+	left 	 : 0px;
+	background: rgba(0,0,0,0.33);
+	cursor: default;
+	z-index: 99999;
+	overflow: auto;
+	display: none;
+}
+.fancybox_area{
+	position : relative;
+	width 	 : 35%;
+	top 	 : 0px;
+	left 	 : 0px;
+	padding: 5px 30px 20px 30px;
+	margin: 80px auto;
+	font-size: 18px;
+	border: 3px solid rgb(165,165,165);
+	border-radius: 15px;
+	border-collapse: separate !important;
+	background-color: #F1FAFA;
+	overflow: auto;
+}
+.fancybox_area h2{
+	text-align: center;
+}
+.fancybox_cancel{
+	float: right;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.fancybox_btn{
+	float: right;
+}
+.fancybox_table{								/*-----------檢核表樣式-----------*/
+	width: 100%;
+	font-size: 18px;
+	margin-top: -10px;
+	text-align: left;
+	border: #272822 1px solid;
+}
+.fancybox_table th{
+	padding: 5px;
+	line-height: 30px;
+	background-color: rgb(91,155,213);
+	border-bottom: 1px solid #1F1F1F;
+}
+.fancybox_table td{
+	padding: 5px;
+	font-size: 16px;
+	vertical-align: middle;
+	background-color: rgb(210,222,239);
+	border-bottom: 1px solid #1F1F1F ;
+}
+.fancybox_larrow{
+	float: left;
+	width: 30px;
+	padding: 5px;
+	margin-top: 45%;
+	margin-left: 90px;
+	text-align: center;
+	background-color: #F1FAFA;
+	border: 3px solid rgb(165,165,165);
+	border-radius: 20px;
+	cursor: pointer;
+}
+.fancybox_rarrow{
+	float: right;
+	width: 30px;
+	padding: 5px;
+	margin-top: 45%;
+	margin-right: 90px;
+	text-align: center;
+	background-color: #F1FAFA;
+	border: 3px solid rgb(165,165,165);
+	border-radius: 20px;
+	cursor: pointer;
+}
+.fancybox_tips{
+	margin-top: -5px;
+	font-size: 16px;
+	color: #148BE2;
+}
+.fancybox_mark{
+	font-size: 14px;
+	color: red;
+}

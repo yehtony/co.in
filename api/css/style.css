@@ -1,0 +1,97 @@
+/*-----------------------------專題探究學習(首頁)：版型-----------------------------*/
+@charset "utf-8";
+
+html, body{
+	height: 100%;							/*-----------全視窗height100%-----------*/
+	margin: 0px;
+	font-family: 微軟正黑體;
+	text-align: center;
+	overflow: hidden;
+	background-color: #F1FAFA;
+/*	background: url('/co.in/model/images/backgroud.jpg') no-repeat;*/
+}
+h1{
+	font-size: 240%;
+	letter-spacing: 20px; 					/*------------文字中間隔-------------*/
+/*	background-color: pink;*/
+}
+h4{
+	margin-top: -50px;
+	font-size: 110%;
+/*	word-spacing: 20px;*/ 					/*------------字母中間隔-------------*/
+}
+#wrapper{
+	height: 100%;
+/*	background-color: red;*/
+}
+#header{
+	padding: 10px 0px 5px 0px;				/*------------取消margin-------------*/
+	font-size: 180%;
+	font-weight: bolder;
+/*	background-color:  yellow;*/
+}
+#leftcolumn{
+	float: left;
+	width: 50%;
+	min-height: 60%;
+/*	background-color: red;*/
+}
+#leftcolumn img{
+	margin: 10px 0px 0px 50px;
+}
+#rightcolumn{
+	float: left;
+	width: 50%;
+	min-height: 60%;
+/*	background-color: green;*/
+}
+#footer{
+	padding: 6px 0px 1px 0px;
+	font-size: 20%;
+	line-height: 5px;
+	text-align: center;
+	clear: both;
+/*	background-color: pink;*/
+}
+#footer img{
+	vertical-align: middle;
+}
+/*-----------------------------專題學習系統平台：首頁-----------------------------*/
+#login_field{
+	width: 60%;
+	margin: 80px 0px 0px 50px;
+	border-radius: 60px;
+/*	background-color: pink;*/
+}
+#login_btn{
+	position: absolute;
+	padding: 25px;
+	font-size: 20px;
+	color: #FFFFFF;
+	background-color: #79bbff;
+	border: 1px solid #84bbf3;
+	border-radius: 100px;
+	cursor: pointer;
+}
+#login_btn:hover{
+	background-color: #378de5;
+}
+#register_btn{
+	color: blue;
+	cursor: pointer;
+}
+#forget_btn{
+	margin-left: 100px;
+	color: blue;
+	cursor: pointer;
+}
+@media only screen and (max-device-width: 639px){
+	html, body{
+		background-color: #F6FCA6;
+	}
+}
+/*@media only screen (min-width: 480px) and (max-width: 640px){
+	html, body{
+		background-color: #F6FCA6;
+	}
+}*/
